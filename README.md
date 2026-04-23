@@ -60,18 +60,6 @@ Installation
     python app.py
     The app will be available at `http://127.0.0.1:5001`.
 
- 📂 Project Structure
-
-├── app.py              # Main Flask application & Database logic
-├── templates/          # HTML Templates (Jinja2)
-│   ├── base.html       # Global layout, Navigation, & Footer
-│   ├── index.html      # Landing page & Search
-│   ├── flights.html    # Search results & Flight listing
-│   ├── book.html       # Booking form & Flight summary
-│   ├── bookings.html   # User booking history
-│   └── dashboard.html  # Admin metrics & analytics
-└── README.md           # Project documentation
-
 📝 Future Enhancements
 * User Authentication: Secure login/signup for passengers.
 * Seat Map: Interactive UI to select specific seats on the aircraft.
