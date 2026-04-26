@@ -2,66 +2,62 @@
 
 SkyWings is a full-stack web application built using Python (Flask) and MySQL. It provides a seamless interface for passengers to search for flights, book tickets, and manage reservations, while offering an administrative dashboard to track revenue and flight performance.
 
-🌟 Features:
+🚀 Core Functionality
 
-Passenger Interface
-* Dynamic Flight Search: Filter flights by origin and destination cities.
-* Seamless Booking: Integrated booking form for passenger details, passport info, and seat selection.
-* Booking Management: View all past and current bookings with real-time status updates (Confirmed/Cancelled).
-* Instant Cancellation: One-click booking cancellation directly from the user dashboard.
+Flight Search
+- Users select origin and destination cities
+- System queries database for matching flights
+- Results display flight number, timing, and class-wise pricing
 
-Administrative Features:
-* Operational Dashboard: Real-time metrics showing total confirmed bookings and total revenue.
-* Flight Performance: Detailed breakdown of revenue and booking counts per specific flight route.
-* Visual Analytics: Performance bars to track seat occupancy at a glance.
+Booking Process
+- User selects a flight and clicks "Book Now"
+- Fills passenger details (name, passport, email, phone)
+- Selects seat number and travel class (Economy/Business/First)
+- System calculates price based on selected class
+- Booking saved to database with 'Confirmed' status
 
-🛠️ Tech Stack:
+Booking Management
+- Users can view all their bookings with details
+- Cancellation updates status to 'Cancelled'
+- Cancelled bookings no longer count in revenue
 
-* Backend: Python 3.x, Flask
-* Database: MySQL
-* Database Connector: PyMySQL
-* Frontend: HTML5, CSS3 (Custom), Bootstrap 5, FontAwesome 6
-* Templating: Jinja2
+Admin Dashboard
+- Total confirmed bookings count
+- Total revenue from all confirmed bookings
+- Flight-wise breakdown of bookings and revenue
 
-📊 Database Schema:
+💾 Data Persistence
 
-The system relies on a relational database named `airline_db`. Below are the core entities:
+- All bookings are permanently stored in MySQL database
+- No data loss on browser refresh, server restart, or system shutdown
+- Real-time updates across all user sessions
 
-1.  Airports: Stores airport codes and city names.
-2.  Aircraft: Details about the fleet (Model, capacity).
-3.  Flights: Contains schedules, routes (origin/destination IDs), and base pricing.
-4.  Passengers: Stores personal information and contact details.
-5.  Bookings: Links passengers to flights, including seat numbers, travel class, and status.
+🔒 Security Features
 
-🚀 Getting Started:
+- Input validation for seat numbers (e.g., 12A format)
+- Duplicate seat booking prevention
+- Flash messages for user feedback
+- SQL injection protection via parameterized queries
 
-Prerequisites
-* Python 3.8+
-* MySQL Server
-* Pip (Python package manager)
+🎯 Use Cases
 
-Installation
+1. Passenger: Search and book flight tickets online
+2. Admin: Monitor booking trends and revenue
+3. Airline Staff: Track flight performance and occupancy
 
-1.  Clone the repository:
-    git clone https://github.com/yourusername/airline-reservation-system.git
-    cd airline-reservation-system
+📝 Conclusion
 
-2.  Install dependencies:
-    pip install flask pymysql
-    
-4.  Database Setup:
-    * Create a database named `airline_db` in your MySQL server.
-    * Import your SQL schema file (if provided) or create the tables based on the `app.py` queries.
-    * **Update Credentials:** Open `app.py` and update the `get_db()` function with your MySQL password:
-   
-    password='YOUR_PASSWORD'
+SkyWings Airline Reservation System demonstrates a complete Database Management System (DBMS) project with:
 
-5.  Run the application:
-    python app.py
-    The app will be available at `http://127.0.0.1:5001`.
+- Full CRUD operations (Create, Read, Update, Delete)
+- Relational database design with foreign keys
+- Real-time data persistence
+- User-friendly web interface
+- Admin analytics dashboard
 
-📝 Future Enhancements
-* User Authentication: Secure login/signup for passengers.
-* Seat Map: Interactive UI to select specific seats on the aircraft.
-* Payment Gateway: Integration with Stripe or PayPal for real-time transactions.
-* PDF Tickets: Auto-generate and email flight tickets upon confirmation.
+This project showcases practical implementation of database concepts in a real-world airline booking scenario.
+
+👨‍💻 Author
+Naikbakht
+
+Furhther details in Project folder...
